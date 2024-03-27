@@ -89,18 +89,18 @@
                                     target="_blank">
                                     <i class=""></i>
                                 </a>
-                                <a href="https://www.lovemaiow.top/stop.html" class="link"
+                                <a href="https://www.『昼语夜静』.top/stop.html" class="link"
                                     id="qq" target="_blank">
                                     <i class=""></i>
                                 </a>
-                                <a href="https://www.lovemaiow.top/stop.html" class="link" id="email">
+                                <a href="https://www.『昼语夜静』.top/stop.html" class="link" id="email">
                                     <i class=""></i>
                                 </a>
                                 <a href="https://space.bilibili.com/1567129920/" class="link" id="bilibili"
                                     target="_blank">
                                     <i class=""></i>
                                 </a>
-                                <a href="https://www.lovemaiow.top/windex.html" class="link" id="telegram" target="_blank">
+                                <a href="https://www.『昼语夜静』.top/windex.html" class="link" id="telegram" target="_blank">
                                     <i class=""></i>
                                 </a>
                                 <a id="link-text">通过这里联系我</a>
@@ -108,6 +108,32 @@
                         </div>
                     </div>
                     <!--第二屏 Logo-->
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            fetchServerStatus();
+                        });
+                
+                        function fetchServerStatus() {
+                            const serverIP = 'zhouyuyejing.cn';
+                            const serverPort = '25565';
+                            
+                            const url = `https://mcapi.us/server/status?ip=${serverIP}&port=${serverPort}`;
+                
+                            fetch(url)
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.status === 'success' && data.online) {
+                                    document.querySelector('.sip').textContent = '当前在线' + data.players.now + '名玩家';
+                                } else {
+                                    document.querySelector('.sip').textContent = '服务器离线';
+                                }
+                            })
+                            .catch(error => {
+                                document.querySelector('.sip').textContent = '无法获取服务器状态';
+                                console.error('Error:', error);
+                            });
+                        }
+                    </script>
                     <div class="logo cards" style="display: none" id="changemore">
                         <a class="logo-text" id="logo-text-small">love</a>
                     </div>
@@ -153,7 +179,7 @@
                             <!--分隔线-->
                             <div class="line">
                                 <i class=""></i>
-                                <span class="line-text">网站列表</span>
+                                <span class="line-text">功能列表&nbsp;</span>
                             </div>
                             <!--网站链接-->
                             <div class="link">
@@ -163,12 +189,12 @@
                                         <a id="link-url-1" href="http://8.130.51.17:8090/#/" target="_blank">
                                             <div class="link-card cards">
                                                 <i id="link-icon-1" class=""></i>
-                                                <span class="link-name" id="link-name-1">笔记$日志</span>
+                                                <span class="link-name" id="link-name-1">点击进入交流群&nbsp;</span>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="col 2">
-                                        <a id="link-url-2" href="https://www.lovemaiow.top/windex.html" target="_blank">
+                                        <a id="link-url-2" href="https://www.zhouyuyejing.cn/windex.html" target="_blank">
                                             <div class="link-card cards">
                                                 <i id="link-icon-2" class=""></i>
                                                 <span class="link-name" id="link-name-2">超级炫酷页面</span>
@@ -323,7 +349,7 @@
                         <!--左侧内容-->
                         <div class="box-left">
                             <div class="img-title">
-                                <span class="img-title-big" id="logo-title-other">loveMaioW</span>
+                                <span class="img-title-big" id="logo-title-other">『昼语夜静』</span>
                                 <span class="img-text" id="logo-title-other-small">.top</span><br />
                                 <span class="img-text">&nbsp;v&nbsp;3.0</span>
                                 <a href="https://github.com/lovemiaow" target="_blank">
@@ -429,7 +455,7 @@
                     <script>
                         document.write((new Date()).getFullYear());
                     </script>
-                    <a href="www.lovemiaow.top" id="power-text">loveMaioW</a>
+                    <a href="www.lovemiaow.top" id="power-text">『昼语夜静』</a>
                 </span>
                 <span id="made">&amp;&nbsp;Made&nbsp;by&nbsp;<a href="https://github.com/loveMiaoW/" target="_blank">love</a></span>
                 <a href="https://beian.miit.gov.cn" id="beian" target="_blank">&amp;&nbsp;</a>
